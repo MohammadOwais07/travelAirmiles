@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap-3.3.7-dist/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Travel Airmiles</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/dashboardstyle.css">
+    <link rel="stylesheet" href="img/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/select2.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Bootstrap -->
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+
+    <![endif]-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <style>
+        /* remove the original arrow */
+        .selected{
+            border-bottom-width: 1px;
+            border-color: white;
+            box-shadow: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -o-appearance: none;
+            background: url(img/caret.png) no-repeat 95% #fff;
+            border-bottom-color: #e2e2e2;
+        }
+        .selected:focus{
+            border-bottom-width: 1px;
+            border-color: white;
+            box-shadow: none;
+            border-bottom-color: #e2e2e2;
+        }
+        .slideInDown {
+            animation-name: slideInDown;
+            animation-duration: 0.5s;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+
+    <div class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo2">
+                    <img class="img-responsive" src="img/logo2.png"/>
+                </div>
+            </a>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right n">
+                    <li>
+                        <a href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#blog ">BLOG</a>
+                    </li>
+                    <li class="l">
+                        <div></div>
+                    </li>
+                    <li>
+                        <div class="row s" data-toggle="dropdown">
+                            <div class="col-md-offset-1 col-md-2 i ">
+                                <img src="img/girlimg.png" />
+                            </div>
+                            <div class="col-md-offset-1 col-md-8">
+                                <h4>
+                                    Maria Sharapova
+                                </h4>
+                                <p>
+                                    New York, USA
+                                    <img style="float: right; margin-top: -10%;" src="img/expand-arow.png" />
+                                </p>
+
+                            </div>
+                            <div class="col-md-1">
+
+                            </div>
+
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a style="color: #5280C6;">Profile</a>
+                            </li>
+                            <li>
+                                <a style="color: #5280C6;">Dashboard</a>
+                            </li>
+                            <li>
+                                <a style="color: #5280C6;">About Us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <input id="toggle" type="checkbox" />
+            <label class="hamburger" for="toggle" style="width: 5%; float: right;">
+                <div class="top"></div>
+                <div class="meat"></div>
+                <div class="bottom"></div>
+            </label>
+
+            <nav class="menu">
+                <a class="link">About</a>
+                <a class="link">Blog</a>
+                <a class="link">Profile</a>
+                <a class="link">Dashboard</a>
+                <a class="link">Logout</a>
+                <a></a>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <!--NAVBAR-ENDS-->
+
+    <!--HOME-->
+
+    <section id="home">
+
+        <div class="container">
+
+        </div>
+
+    </section>
+
+    <!--HOME-ENDS-->
+
+    <!--ROUTE-->
+
+    <section id="route">
+        <div class="container box-shadow">
+
+            <div class="row first-row">
+                <div class="col-md-3 col-sm-12 col-xs-12 first-part">
+                    <p>Choose way</p>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-4 col-xs-6">
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio">One way
+                            </label>
+                        </div>
+                        <div class="col-md-5 col-sm-offset-1 col-sm-4 col-xs-6 radio-button">
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio">Round trip
+                            </label>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 city-picker1">
+                    <p>From</p>
+                    <select class="selectpicker" data-live-search="true">
+                        <option>Boston</option>
+                        <option>Alaska </option>
+                        <option>Arizona </option>
+                        <option>Arkansas </option>
+                        <option>California </option>
+                        <option>Colorado </option>
+                        <option>Connecticut </option>
+                        <option>Delaware </option>
+                        <option>Florida </option>
+                    </select>
+                </div>
+                <div class="col-md-3  col-sm-6 col-xs-6 city-picker2">
+                    <p>To</p>
+                    <select class="selectpicker" data-live-search="true">
+                        <option>London</option>
+                        <option>Alaska </option>
+                        <option>Arizona </option>
+                        <option>Arkansas </option>
+                        <option>California </option>
+                        <option>Colorado </option>
+                        <option>Connecticut </option>
+                        <option>Delaware </option>
+                        <option>Florida </option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12 last-part">
+                    <p class="last-para">Date - Return</p>
+                    <div class="input-group date" data-provide="datepicker">
+                        <div class="col-md-4 col-sm-4 col-xs-4 pickers">
+                        <input type="text" name="birthday" value="10/24/1984" class="form-control datpiker1" />
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1">
+                            <span class="dash">-</span>
+                        </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 pickers">
+                        <input type="text" name="birthday1" value="10/24/1984" class="form-control datpiker2" />
+                            </div>
+                        <div>
+                            <i class="fa fa-calendar fa-1x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+                <div class="row second-row">
+                    <div class="col-md-3">
+                        <p>Adults</p>
+                        <select class="form-control selected" id="sel1">
+                            <option value="" hidden>Select Adults</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Send every</p>
+                        <select class="form-control selected" id="sel1">
+                            <option value="" hidden>Select Day</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+
+
+
+                    </div>
+                    <div class="col-md-3 advance">
+                        <u>
+                            <p id="advanced">Advanced</p>
+                        </u>
+                    </div>
+
+
+
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-primary btn1">Save alert</button>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+                <div class="row last" id="add" >
+
+
+                </div>
+
+
+
+        </div>
+    </section>
+
+    <!--END-ROUTE-->
+    <section id="body">
+
+        <div class="container">
+            <div class="row">
+                <p class="head"> SAVE ALERTS</p>
+            </div>
+            <div class="row">
+                <ul class="list-inline">
+                    <li><a class="head-link-tab1"  href="#">SHOW ALL</a></li>
+                    <li><a class="head-link-tab" href="#">UPCOMING</a></li>
+                    <li><a class="head-link-tab" href="#">EXPIRED</a></li>
+
+                </ul>
+
+                <div class="col-md-12"></div>
+
+            </div>
+
+            <div class="row schedule-row1">
+                <div class="col-md-3 col-sm-3 img-row1" style="padding-left: 0"><img  src="img/background.png" alt=""></div>
+                <div class="col-md-4  col-sm-4 col-xs-6 row1-2nd-dive">
+                    <div class="col-md-11 col-sm-12 col-xs-12 col-md-offset-1">
+                        <p class="schedule-sub-row1">London , England <span> <button class="btn-upcomming" >UPCOMMING</button></span></p>
+                    </div>
+
+                    <div class="col-md-11 col-sm-12 col-xs-12 col-md-offset-1"><p class="schedule-row2-text">Alert number  : <span class="schedule-row2-span">0123</span></p></div>
+                    <div class="col-md-11  col-sm-12 col-xs-12 col-md-offset-1"><p class="schedule-row3-text">Airline    : <span class="schedule-row3-span"><img class="americanAirLine" src="img/logo-americanAIRLINE.png" alt=""></span></p></div>
+                    <!--<div class="col-md-11 col-md-offset-1"><p class="schedule-row4-text">Boeing 777-300</p></div>-->
+                    <!--<div class="col-md-11 col-md-offset-1"><i class="fa fa-wifi icon-wifi"></i> <span class="social-icon"><i class="fa fa-briefcase"></i></span> <span class="social-icon"><i class="fa fa-plug"></i></span></div>-->
+                </div>
+                <div class="col-md-2"></div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6 row1-3rd-dive">
+                    <div class="col-md-2 col-xs-2"><img class="plan-img" src="img/departureArivl-Img.png" alt=""></div>
+
+                    <div class="col-md-8 col-xs-8 bostan">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-departure">Departure </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-boston">Boston(BOS) </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-date">13 Dec 2018 </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-8 col-xs-8 london">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-departure">Arrival </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-boston">London(LND) </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-date">13 Dec 2018 </p>
+                        </div>
+
+                    </div>
+                </div>
+                <!--</div>  &lt;!&ndash;shawdowbox div closed&ndash;&gt;-->
+            </div>
+
+            <div class="row schedule-row1">
+                <div class="col-md-3 col-sm-3 img-row1" style="padding-left: 0"><img  src="img/background.png" alt=""></div>
+                <div class="col-md-4  col-sm-4 col-xs-6 row1-2nd-dive">
+                    <div class="col-md-11 col-sm-12 col-xs-12 col-md-offset-1">
+                        <p class="schedule-sub-row1">London , England <span> <button class="btn-upcomming" >UPCOMMING</button></span></p>
+                    </div>
+
+                    <div class="col-md-11 col-sm-12 col-xs-12 col-md-offset-1"><p class="schedule-row2-text">Alert number  : <span class="schedule-row2-span">0123</span></p></div>
+                    <div class="col-md-11  col-sm-12 col-xs-12 col-md-offset-1"><p class="schedule-row3-text">Airline    : <span class="schedule-row3-span"><img class="americanAirLine" src="img/logo-americanAIRLINE.png" alt=""></span></p></div>
+                    <!--<div class="col-md-11 col-md-offset-1"><p class="schedule-row4-text">Boeing 777-300</p></div>-->
+                    <!--<div class="col-md-11 col-md-offset-1"><i class="fa fa-wifi icon-wifi"></i> <span class="social-icon"><i class="fa fa-briefcase"></i></span> <span class="social-icon"><i class="fa fa-plug"></i></span></div>-->
+                </div>
+                <div class="col-md-2"></div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6 row1-3rd-dive">
+                    <div class="col-md-2 col-xs-2"><img class="plan-img" src="img/departureArivl-Img.png" alt=""></div>
+
+                    <div class="col-md-8 col-xs-8 bostan">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-departure">Departure </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-boston">Boston(BOS) </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-date">13 Dec 2018 </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-8 col-xs-8 london">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-departure">Arrival </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-boston">London(LND) </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-date">13 Dec 2018 </p>
+                        </div>
+
+                    </div>
+                </div>
+                <!--</div>  &lt;!&ndash;shawdowbox div closed&ndash;&gt;-->
+            </div>
+
+            <div class="row schedule-row1 last-row">
+                <div class="col-md-3 col-sm-3 img-row1" style="padding-left: 0"><img  src="img/background.png" alt=""></div>
+                <div class="col-md-4  col-sm-4 col-xs-6 row1-2nd-dive">
+                    <div class="col-md-11 col-sm-12 col-xs-12 col-md-offset-1">
+                        <p class="schedule-sub-row1">London , England <span> <button class="btn-upcomming" >UPCOMMING</button></span></p>
+                    </div>
+
+                    <div class="col-md-11 col-sm-12 col-xs-12 col-md-offset-1"><p class="schedule-row2-text">Alert number  : <span class="schedule-row2-span">0123</span></p></div>
+                    <div class="col-md-11  col-sm-12 col-xs-12 col-md-offset-1"><p class="schedule-row3-text">Airline    : <span class="schedule-row3-span"><img class="americanAirLine" src="img/logo-americanAIRLINE.png" alt=""></span></p></div>
+                    <!--<div class="col-md-11 col-md-offset-1"><p class="schedule-row4-text">Boeing 777-300</p></div>-->
+                    <!--<div class="col-md-11 col-md-offset-1"><i class="fa fa-wifi icon-wifi"></i> <span class="social-icon"><i class="fa fa-briefcase"></i></span> <span class="social-icon"><i class="fa fa-plug"></i></span></div>-->
+                </div>
+                <div class="col-md-2"></div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6 row1-3rd-dive">
+                    <div class="col-md-2 col-xs-2"><img class="plan-img" src="img/departureArivl-Img.png" alt=""></div>
+
+                    <div class="col-md-8 col-xs-8 bostan">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-departure">Departure </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-boston">Boston(BOS) </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-date">13 Dec 2018 </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-8 col-xs-8 london">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-departure">Arrival </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-boston">London(LND) </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="schedule-date">13 Dec 2018 </p>
+                        </div>
+
+                    </div>
+                </div>
+                <!--</div>  &lt;!&ndash;shawdowbox div closed&ndash;&gt;-->
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js"></script>
+
+    <script>
+        var clicked = true;
+        $('#advanced').on('click',function(){
+            console.log(clicked)
+            if(clicked == true){
+                //$('#add').css("display","block");
+                $('#add').append('<div class="col-md-2 animated slideInDown"> <select class="form-control selected" id="sel1"> <option value="" hidden>Select Class</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> </select> </div> <div class="col-md-2 col-md-offset-1 animated slideInDown"> <select class="form-control selected" id="sel1"> <option value="" hidden>Connections</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> </select> </div> <div class="col-md-2 col-md-offset-1 animated slideInDown"> <select class="form-control selected" id="sel1"> <option value="" hidden>Executed Miles</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> </select> </div> <div class="col-md-2 col-md-offset-1 animated slideInDown"> </div>')
+            }
+            clicked = false;
+        });
+
+
+    </script>
+    <!--Navbar-Fade-->
+    <script>
+        $(function () {
+            $('input[name="birthday"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1901,
+                maxYear: parseInt(moment().format('YYYY'), 10)
+            });
+        });
+        $(function () {
+            $('input[name="birthday1"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1901,
+                maxYear: parseInt(moment().format('YYYY'), 10)
+            });
+        });
+    </script>
+    <script>
+
+        (function ($) {
+            $(document).ready(function () {
+
+                $(".navbar").show();
+
+                $(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 500) {
+                            $('.navbar').fadeOut();
+                        } else {
+                            $('.navbar').fadeIn();
+                        }
+                    });
+                });
+
+            });
+        }(jQuery));
+    </script>
+
+    <!--Navbar-Fade-->
+</body>
+
+</html>
